@@ -7,7 +7,22 @@ This project builds an **ELT pipeline** that extracts data from **S3**, stages t
 A music streaming startup, Sparkify, has grown their user base and song database and want to move their processes and data onto the cloud. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
 
 ## Usage
+### Configuration
 
+To use the SDK notebooks, you'll have to create access keys for AWS. If these keys are unavailable, you can manually create these assets via the AWS Management Console. Once these assets are available, complete the information for your Redshift cluster and IAM-Role that can manage your cluster and read S3 buckets.
+
+### ETL pipeline instructions
+
+Once your Redshift cluster is created, ensure you have the appropriate virtual environment set-up and activated. Then, run the following commands in the terminal.
+
+To create the tables in Redshift cluster
+```
+python create_tables.py
+```
+To load the data into the Redshift cluster
+```
+python etl.py
+```
 
 ## Project Structure
 
