@@ -11,7 +11,7 @@ A music streaming startup, Sparkify, has grown their user base and song database
 
 To use the SDK notebooks, you'll have to create access keys for AWS. If these keys are unavailable, you can manually create these assets via the AWS Management Console. Once these assets are available, complete the information for your Redshift cluster and IAM-Role that can manage your cluster and read S3 buckets.
 
-### ETL pipeline instructions
+## ETL pipeline instructions
 
 Once your Redshift cluster is created, ensure you have the appropriate virtual environment set-up and activated. Then, run the following commands in the terminal.
 
@@ -143,7 +143,7 @@ time
     weekday VARCHAR
 ```
 
-### Solution discussion
+## Solution Discussion
 
 Sparkify, a music streaming startup, has been amassing significant amounts of user activity and song metadata. This information, currently stored as JSON logs in an S3 bucket, is immensely valuable for gaining insights into user behavior and preferences, which in turn can drive key business decisions.
 
@@ -160,7 +160,7 @@ Sparkify, a music streaming startup, has been amassing significant amounts of us
 
 Overall, the goal of this database solution should be to optimize Sparkify's data for analysis, allowing the company to derive insights that could drive business growth, user engagement, and user experience improvements.
 
-### Database Schema Design
+## Database Schema Design
 
 I've proposed a star schema for the database design, centered around the songplays table as the fact table. This design decision was based on the needs of the analysis team and the nature of the questions they'll be asking.
 
@@ -172,7 +172,7 @@ The fact table contains the records in a log of song plays, which is the core fo
   
 The four dimension tables have been chosen to provide additional context to the facts recorded in songplays.
 
-### ETL Pipeline
+## ETL Pipeline
 
 Our ETL pipeline has been designed to automate the data flow from raw logs in the S3 bucket to structured, queryable tables in Redshift. The pipeline is constructed as follows:
 
